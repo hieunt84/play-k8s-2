@@ -105,16 +105,16 @@ wordpressPassword: Abcqwe123
 existingSecret: ""
 ## @param wordpressEmail WordPress user email
 ##
-wordpressEmail: user@example.com
+wordpressEmail: hieunt9@gmail.com
 ## @param wordpressFirstName WordPress user first name
 ##
-wordpressFirstName: FirstName
+wordpressFirstName: Hieu
 ## @param wordpressLastName WordPress user last name
 ##
-wordpressLastName: LastName
+wordpressLastName: Nguyen
 ## @param wordpressBlogName Blog name
 ##
-wordpressBlogName: User's Blog!
+wordpressBlogName: HappyIT's Blog!
 ## @param wordpressTablePrefix Prefix to use for WordPress database tables
 ##
 wordpressTablePrefix: wp_
