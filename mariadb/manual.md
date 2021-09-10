@@ -2,6 +2,7 @@
 ```console
   helm search hub mariadb
   helm repo add bitnami https://charts.bitnami.com/bitnami
+  helm repo update
   helm show values bitnami/mariadb > values.yml
   
   config on demand in values.yml
