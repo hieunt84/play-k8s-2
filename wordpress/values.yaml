@@ -69,7 +69,7 @@ diagnosticMode:
 image:
   registry: docker.io
   repository: bitnami/wordpress
-  tag: 5.8.0-debian-10-r18
+  tag: 5.8.1-debian-10-r0
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
@@ -93,11 +93,11 @@ image:
 
 ## @param wordpressUsername WordPress username
 ##
-wordpressUsername: admin
+wordpressUsername: hieunt
 ## @param wordpressPassword WordPress user password
 ## Defaults to a random 10-character alphanumeric string if not set
 ##
-wordpressPassword: Abcqwe123
+wordpressPassword: kspm123456
 ## @param existingSecret Name of existing secret containing WordPress credentials
 ## NOTE: Must contain key `wordpress-password`
 ## NOTE: When it's set, the `wordpressPassword` parameter is ignored
@@ -407,7 +407,7 @@ containerSecurityContext:
 ## @param livenessProbe.successThreshold Success threshold for livenessProbe
 ##
 livenessProbe:
-  enabled: true
+  enabled: false
   httpGet:
     path: /wp-admin/install.php
     port: http
@@ -436,7 +436,7 @@ livenessProbe:
 ## @param readinessProbe.successThreshold Success threshold for readinessProbe
 ##
 readinessProbe:
-  enabled: true
+  enabled: false
   httpGet:
     path: /wp-login.php
     port: http
@@ -624,7 +624,7 @@ persistence:
   accessMode: ReadWriteOnce
   ## @param persistence.size Persistent Volume size
   ##
-  size: 2Gi
+  size: 3Gi
   ## @param persistence.dataSource Custom PVC data source
   ##
   dataSource: {}
@@ -650,7 +650,7 @@ volumePermissions:
   image:
     registry: docker.io
     repository: bitnami/bitnami-shell
-    tag: 10-debian-10-r173
+    tag: 10-debian-10-r187
     pullPolicy: Always
     ## Optionally specify an array of imagePullSecrets.
     ## Secrets must be manually created in the namespace.
@@ -724,7 +724,7 @@ metrics:
   image:
     registry: docker.io
     repository: bitnami/apache-exporter
-    tag: 0.10.0-debian-10-r27
+    tag: 0.10.0-debian-10-r41
     pullPolicy: IfNotPresent
     ## Optionally specify an array of imagePullSecrets.
     ## Secrets must be manually created in the namespace.
@@ -837,7 +837,7 @@ externalDatabase:
   user: wp
   ## @param externalDatabase.password External Database user password
   ##
-  password: "Abcqwe123"
+  password: Abcqwe123
   ## @param externalDatabase.database External Database database name
   ##
   database: wordpress
