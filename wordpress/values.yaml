@@ -143,7 +143,7 @@ persistence:
   ## If you want to reuse an existing claim, you can pass the name of the PVC using
   ## the existingClaim variable
   # existingClaim: your-claim
-  accessModes: ReadWriteOnce
+  accessMode: ReadWriteMany
   size: 2Gi
 
 ##
