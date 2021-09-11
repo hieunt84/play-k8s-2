@@ -18,6 +18,9 @@ mysql -h mariadb-primary.default.svc.cluster.local -uroot -p
 ### Command helm
 ```console
 helm search hub mariadb
+helm search hub mariadb --max-col-width 0
+helm search hub bitnami mariadb
+
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm install mariadb bitnami/mariadb -f values.yaml
