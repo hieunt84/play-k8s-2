@@ -3,14 +3,16 @@
   helm search hub mariadb
   helm repo add bitnami https://charts.bitnami.com/bitnami
   helm repo update
-  helm show values bitnami/mariadb > values.yml
+  helm show values bitnami/mariadb > pre-values.yaml
+  cp pre-values.yaml values.yaml
   
-  config on demand in values.yml
+  config on demand in values.yaml
     config line 90 architecture: replication    
     config from line 95 auth:...
     config primary:...
       persistent.storageClass: "nfs-client"    
     config secondary similar primary ...
+    
   helm install mariadb bitnami/mariadb -f values.yaml
 ```
 ### Ref
